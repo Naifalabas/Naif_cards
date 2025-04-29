@@ -1,0 +1,1826 @@
+<body style="background: #222; text-align: center;"><!-- مربع البحث -->
+<div style="margin: 20px;">
+  <div style="position: relative; display: inline-block; width: 300px;">
+    <input type="text" id="searchInput" onkeyup="searchCards()" placeholder="ابحث عن تطبيق..." style="width: 100%; padding: 12px 40px 12px 12px; background: orange; color: black; border: none; border-radius: 8px; font-size: 16px;">
+    <span style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: black; font-size: 20px;">&#128269;</span>
+  </div>
+</div>
+
+<!-- سكربت البحث -->
+<script>
+function searchCards() {
+  var input, filter, cards, cardContainer, h3, title, i;
+  input = document.getElementById("searchInput");
+  filter = input.value.toUpperCase();
+  cardContainer = document.querySelectorAll("div[style*='padding: 20px']");
+  
+  for (i = 0; i < cardContainer.length; i++) {
+    h3 = cardContainer[i].querySelector("h3");
+    if (h3) {
+      title = h3.textContent || h3.innerText;
+      if (title.toUpperCase().indexOf(filter) > -1) {
+        cardContainer[i].style.display = "";
+      } else {
+        cardContainer[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
+<body style="background: #222; text-align: center;">
+
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+
+<!-- كرت ميغو لايف -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/0NRPk6Nj/Screenshot-Google.jpg" alt="ميغو لايف" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">ميغو لايف</h3>
+  <input type="number" id="qty_ميغو_لايف" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_ميغو_لايف" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('ميغو لايف', 'qty_ميغو_لايف', 'pay_ميغو_لايف')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت كيكو لايف -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/zBqNh9K1/Screenshot-Google.jpg" alt="كيو لايف" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">كيو لايف</h3>
+  <input type="number" id="qty_كيو_لايف" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_كيو_لايف" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('كيو لايف', 'qty_كيو_لايف', 'pay_كيو_لايف')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت لما شات -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/prTtGzsG/Screenshot-Google.jpg" alt="لما شات" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">لما شات</h3>
+  <input type="number" id="qty_لما_شات" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_لما_شات" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('لما شات', 'qty_لما_شات', 'pay_لما_شات')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+</div>
+
+<!-- سكربت إرسال الطلب عبر واتساب -->
+<script>
+function sendOrder(name, qtyId, payId) {
+  var qty = document.getElementById(qtyId).value;
+  var payment = document.getElementById(payId).value;
+  if (qty && payment) {
+    var message = `طلب جديد:\nالتطبيق: ${name}\nالكمية: ${qty}\nطريقة الدفع: ${payment}`;
+    window.open('https://wa.me/96170283696?text=' + encodeURIComponent(message), '_blank');
+  } else {
+    alert('يرجى تعبئة الكمية واختيار طريقة الدفع');
+  }
+}
+</script>
+
+</body>
+
+
+</div>
+
+<!-- سكربت زر ارسال عبر واتساب -->
+<script>
+function sendOrder(name, qtyId, payId) {
+  var qty = document.getElementById(qtyId).value;
+  var payment = document.getElementById(payId).value;
+  if (qty && payment) {
+    var message = `طلب جديد:\nالتطبيق: ${name}\nالكمية: ${qty}\nطريقة الدفع: ${payment}`;
+    window.open('https://wa.me/96170283696?text=' + encodeURIComponent(message), '_blank');
+  } else {
+    alert('يرجى تعبئة الكمية واختيار طريقة الدفع');
+  }
+}
+</script>
+<body style="background: #222; text-align: center;">
+
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+
+<!-- كرت زينا -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/8CRDj1FH/Screenshot-Google.jpg" alt="زينا" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">زينا</h3>
+  <input type="number" id="qty_زينا" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_زينا" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('زينا', 'qty_زينا', 'pay_زينا')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت بيغو لايف -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/sXKr4w4G/Screenshot-Google.jpg" alt="بيغو لايف" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">بيغو لايف</h3>
+  <input type="number" id="qty_بيغو_لايف" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_بيغو_لايف" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('بيغو لايف', 'qty_بيغو_لايف', 'pay_بيغو_لايف')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت يوهو واكا -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/J02C90g1/Screenshot-Google.jpg" alt="يوهو واكا" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">يوهو واكا</h3>
+  <input type="number" id="qty_يوهو_واكا" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_يوهو_واكا" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('يوهو واكا', 'qty_يوهو_واكا', 'pay_يوهو_واكا')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت ليفو لايف -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/xjxQkpdW/Screenshot-Google.jpg" alt="ليفو لايف" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">ليفو لايف</h3>
+  <input type="number" id="qty_ليفو_لايف" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_ليفو_لايف" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('ليفو لايف', 'qty_ليفو_لايف', 'pay_ليفو_لايف')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت سول شيل -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/pXmHKQhy/Screenshot-Google.jpg" alt="سول شيل" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">سول شيل</h3>
+  <input type="number" id="qty_سول_شيل" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_سول_شيل" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('سول شيل', 'qty_سول_شيل', 'pay_سول_شيل')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت لامي شات -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/VL2cgSng/Screenshot-Google.jpg" alt="لامي شات" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">لامي شات</h3>
+  <input type="number" id="qty_لامي_شات" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_لامي_شات" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('لامي شات', 'qty_لامي_شات', 'pay_لامي_شات')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت تالك تالك -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/fRXQrwvN/Screenshot-Google.jpg" alt="تالك تالك" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">تالك تالك</h3>
+  <input type="number" id="qty_تالك_تالك" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_تالك_تالك" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('تالك تالك', 'qty_تالك_تالك', 'pay_تالك_تالك')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت هيا شات -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/LspFdryZ/Screenshot-Google.jpg" alt="هيا شات" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">هيا شات</h3>
+  <input type="number" id="qty_هيا_شات" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_هيا_شات" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('هيا شات', 'qty_هيا_شات', 'pay_هيا_شات')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت أولاميت -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/tgNQ92fv/Screenshot-Google.jpg" alt="اولاميت" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">اولاميت</h3>
+  <input type="number" id="qty_اولاميت" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_اولاميت" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('اولاميت', 'qty_اولاميت', 'pay_اولاميت')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div><!-- كرت هوا شات -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/Y92c0QBr/Screenshot-Google.jpg" alt="هوا شات" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">هوا شات</h3>
+  <input type="number" id="qty_هوا_شات" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_هوا_شات" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('هوا شات', 'qty_هوا_شات', 'pay_هوا_شات')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت حكي شات -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/NMd3HLQ1/Screenshot-Google.jpg" alt="حكي شات" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">حكي شات</h3>
+  <input type="number" id="qty_حكي_شات" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_حكي_شات" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('حكي شات', 'qty_حكي_شات', 'pay_حكي_شات')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت إيمو -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/NFLW7Y0Z/Screenshot-Google.jpg" alt="إيمو" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">إيمو</h3>
+  <input type="number" id="qty_إيمو" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_إيمو" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('إيمو', 'qty_إيمو', 'pay_إيمو')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت لايف يو شات -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/cLfYrtQj/Screenshot-Google.jpg" alt="لايف يو شات" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">لايف يو شات</h3>
+  <input type="number" id="qty_لايف_يو_شات" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_لايف_يو_شات" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('لايف يو شات', 'qty_لايف_يو_شات', 'pay_لايف_يو_شات')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت توميل شات -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/mrwHSxpy/Screenshot-Google.jpg" alt="توميل شات" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">توميل شات</h3>
+  <input type="number" id="qty_توميل_شات" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_توميل_شات" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('توميل شات', 'qty_توميل_شات', 'pay_توميل_شات')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div><!-- كرت ميكس يو -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/Hxk7ZSfD/Screenshot-Google.jpg" alt="ميكس يو" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">ميكس يو</h3>
+  <input type="number" id="qty_ميكس_يو" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_ميكس_يو" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('ميكس يو', 'qty_ميكس_يو', 'pay_ميكس_يو')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت مانجو لايف -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/9fV9TXbf/Screenshot-Google.jpg" alt="مانجو لايف" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">مانجو لايف</h3>
+  <input type="number" id="qty_مانجو_لايف" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_مانجو_لايف" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('مانجو لايف', 'qty_مانجو_لايف', 'pay_مانجو_لايف')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت بوبو لايف -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/vB2xprs1/Screenshot-Google.jpg" alt="بوبو لايف" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">بوبو لايف</h3>
+  <input type="number" id="qty_بوبو_لايف" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_بوبو_لايف" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('بوبو لايف', 'qty_بوبو_لايف', 'pay_بوبو_لايف')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت يويـو شات -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/MHcfxn69/Screenshot-Google.jpg" alt="يويـو شات" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">يويـو شات</h3>
+  <input type="number" id="qty_يويـو_شات" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_يويـو_شات" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('يويـو شات', 'qty_يويـو_شات', 'pay_يويـو_شات')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت هوني جار -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/NFW90QLB/Screenshot-Google.jpg" alt="هوني جار" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">هوني جار</h3>
+  <input type="number" id="qty_هوني_جار" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_هوني_جار" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('هوني جار', 'qty_هوني_جار', 'pay_هوني_جار')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div><!-- كرت سول شات -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/8k3r4m49/Screenshot-Google.jpg" alt="سول شات" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">سول شات</h3>
+  <input type="number" id="qty_سول_شات" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_سول_شات" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('سول شات', 'qty_سول_شات', 'pay_سول_شات')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت تادا شات -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/28ZLKLX6/Screenshot-Google.jpg" alt="تادا شات" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">تادا شات</h3>
+  <input type="number" id="qty_تادا_شات" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_تادا_شات" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('تادا شات', 'qty_تادا_شات', 'pay_تادا_شات')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت تامي شات -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/MKL2vvWy/Screenshot-Google.jpg" alt="تامي شات" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">تامي شات</h3>
+  <input type="number" id="qty_تامي_شات" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_تامي_شات" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('تامي شات', 'qty_تامي_شات', 'pay_تامي_شات')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت أوهلا شات -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/vZ6R9bBC/Screenshot-Google.jpg" alt="أوهلا شات" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">أوهلا شات</h3>
+  <input type="number" id="qty_أوهلا_شات" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_أوهلا_شات" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('أوهلا شات', 'qty_أوهلا_شات', 'pay_أوهلا_شات')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت واهـا شات -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/R0rkLyJh/Screenshot-Google.jpg" alt="واهـا شات" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">واهـا شات</h3>
+  <input type="number" id="qty_واهـا_شات" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_واهـا_شات" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('واهـا شات', 'qty_واهـا_شات', 'pay_واهـا_شات')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div><!-- كرت بارتي ستار -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/7Lgps9SV/Screenshot-Google.jpg" alt="بارتي ستار" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">بارتي ستار</h3>
+  <input type="number" id="qty_بارتي_ستار" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_بارتي_ستار" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('بارتي ستار', 'qty_بارتي_ستار', 'pay_بارتي_ستار')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت سولفا شات -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/HxdFfM2C/Screenshot-Google.jpg" alt="سولفا شات" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">سولفا شات</h3>
+  <input type="number" id="qty_سولفا_شات" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_سولفا_شات" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('سولفا شات', 'qty_سولفا_شات', 'pay_سولفا_شات')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت أهلاً شات -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/ZRHXZq7v/Screenshot-Google.jpg" alt="أهلاً شات" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">أهلاً شات</h3>
+  <input type="number" id="qty_أهلاً_شات" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_أهلاً_شات" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('أهلاً شات', 'qty_أهلاً_شات', 'pay_أهلاً_شات')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت كواي -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/4y3q3TqL/Screenshot-Google.jpg" alt="كواي" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">كواي</h3>
+  <input type="number" id="qty_كواي" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_كواي" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('كواي', 'qty_كواي', 'pay_كواي')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت PIKA STAR -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/6q1S2mN9/Screenshot-Google.jpg" alt="PIKA STAR" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">PIKA STAR</h3>
+  <input type="number" id="qty_PIKA_STAR" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_PIKA_STAR" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('PIKA STAR', 'qty_PIKA_STAR', 'pay_PIKA_STAR')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div><!-- كرت سكاي شات -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/J7TS2GH9/Screenshot-Google.jpg" alt="سكاي شات" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">سكاي شات</h3>
+  <input type="number" id="qty_سكاي_شات" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_سكاي_شات" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('سكاي شات', 'qty_سكاي_شات', 'pay_سكاي_شات')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت مرحبا شات -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/W1fGRcwp/Screenshot-Google.jpg" alt="مرحبا شات" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">مرحبا شات</h3>
+  <input type="number" id="qty_مرحبا_شات" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_مرحبا_شات" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('مرحبا شات', 'qty_مرحبا_شات', 'pay_مرحبا_شات')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت ليت شات -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/5tYwbKsB/Screenshot-Google.jpg" alt="ليت شات" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">ليت شات</h3>
+  <input type="number" id="qty_ليت_شات" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_ليت_شات" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('ليت شات', 'qty_ليت_شات', 'pay_ليت_شات')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت فانسي لايف -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/vTM97Ybh/Screenshot-Google.jpg" alt="فانسي لايف" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">فانسي لايف</h3>
+  <input type="number" id="qty_فانسي_لايف" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_فانسي_لايف" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('فانسي لايف', 'qty_فانسي_لايف', 'pay_فانسي_لايف')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت أصوات شات -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/LXjLZYKh/Screenshot-Google.jpg" alt="أصوات شات" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">أصوات شات</h3>
+  <input type="number" id="qty_أصوات_شات" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_أصوات_شات" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('أصوات شات', 'qty_أصوات_شات', 'pay_أصوات_شات')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div><!-- كرت سول يو -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/R0kwF1Yj/Screenshot-Google.jpg" alt="سول يو" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">سول يو</h3>
+  <input type="number" id="qty_سول_يو" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_سول_يو" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('سول يو', 'qty_سول_يو', 'pay_سول_يو')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت ميكو لايف -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/BbgFMrv0/Screenshot-Google.jpg" alt="ميكو لايف" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">ميكو لايف</h3>
+  <input type="number" id="qty_ميكو_لايف" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_ميكو_لايف" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('ميكو لايف', 'qty_ميكو_لايف', 'pay_ميكو_لايف')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت آيوم شات -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/05d7kw0B/Screenshot-Google.jpg" alt="آيوم شات" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">آيوم شات</h3>
+  <input type="number" id="qty_آيوم_شات" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_آيوم_شات" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('آيوم شات', 'qty_آيوم_شات', 'pay_آيوم_شات')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت فور فن شات -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/xTfMc1sT/Screenshot-Google.jpg" alt="فور فن شات" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">فور فن شات</h3>
+  <input type="number" id="qty_فور_فن_شات" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_فور_فن_شات" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('فور فن شات', 'qty_فور_فن_شات', 'pay_فور_فن_شات')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت أب لايف -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/kXT88PZN/Screenshot-Google.jpg" alt="أب لايف" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">أب لايف</h3>
+  <input type="number" id="qty_أب_لايف" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_أب_لايف" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('أب لايف', 'qty_أب_لايف', 'pay_أب_لايف')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div><!-- كرت بيلا شات -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/dVDCjSPb/Screenshot-Google.jpg" alt="بيلا شات" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">بيلا شات</h3>
+  <input type="number" id="qty_بيلا_شات" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_بيلا_شات" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('بيلا شات', 'qty_بيلا_شات', 'pay_بيلا_شات')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت جوجو شات -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/VkTCGBzd/Screenshot-Google.jpg" alt="جوجو شات" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">جوجو شات</h3>
+  <input type="number" id="qty_جوجو_شات" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_جوجو_شات" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('جوجو شات', 'qty_جوجو_شات', 'pay_جوجو_شات')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت هابي شات -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/9f7qvRf1/Screenshot-Google.jpg" alt="هابي شات" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">هابي شات</h3>
+  <input type="number" id="qty_هابي_شات" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_هابي_شات" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('هابي شات', 'qty_هابي_شات', 'pay_هابي_شات')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت Yalla Chat -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/XvfG46nM/Screenshot-Google.jpg" alt="Yalla Chat" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">Yalla Chat</h3>
+  <input type="number" id="qty_Yalla_Chat" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_Yalla_Chat" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('Yalla Chat', 'qty_Yalla_Chat', 'pay_Yalla_Chat')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت يوبي -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/W4LFB1L6/Screenshot-Google.jpg" alt="يوبي" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">يوبي</h3>
+  <input type="number" id="qty_يوبي" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_يوبي" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('يوبي', 'qty_يوبي', 'pay_يوبي')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div><!-- كرت بيب لايف -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/xC9kdpdX/Screenshot-Google.jpg" alt="بيب لايف" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">بيب لايف</h3>
+  <input type="number" id="qty_بيب_لايف" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_بيب_لايف" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('بيب لايف', 'qty_بيب_لايف', 'pay_بيب_لايف')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت تاكا -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/0QZzKG6c/Screenshot-Google.jpg" alt="تاكا" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">تاكا</h3>
+  <input type="number" id="qty_تاكا" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_تاكا" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('تاكا', 'qty_تاكا', 'pay_تاكا')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت سوبر لايف -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/ZnRC89pZ/Screenshot-Google.jpg" alt="سوبر لايف" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">سوبر لايف</h3>
+  <input type="number" id="qty_سوبر_لايف" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_سوبر_لايف" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('سوبر لايف', 'qty_سوبر_لايف', 'pay_سوبر_لايف')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت بينمو شات -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/T14hCRJb/Screenshot-Google.jpg" alt="بينمو شات" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">بينمو شات</h3>
+  <input type="number" id="qty_بينمو_شات" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_بينمو_شات" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('بينمو شات', 'qty_بينمو_شات', 'pay_بينمو_شات')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت واهو -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/L6JJh1m3/Screenshot-Google.jpg" alt="واهو" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">واهو</h3>
+  <input type="number" id="qty_واهو" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_واهو" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('واهو', 'qty_واهو', 'pay_واهو')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div><!-- كرت لايكي -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/ZY79Tczq/Screenshot-Google.jpg" alt="لايكي" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">لايكي</h3>
+  <input type="number" id="qty_لايكي" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_لايكي" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('لايكي', 'qty_لايكي', 'pay_لايكي')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت ديدو شات -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/VkVQvJLn/Screenshot-Google.jpg" alt="ديدو شات" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">ديدو شات</h3>
+  <input type="number" id="qty_ديدو_شات" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_ديدو_شات" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('ديدو شات', 'qty_ديدو_شات', 'pay_ديدو_شات')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت وناسة -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/9Fsr9QM5/Screenshot-Google.jpg" alt="وناسة" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">وناسة</h3>
+  <input type="number" id="qty_وناسة" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_وناسة" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('وناسة', 'qty_وناسة', 'pay_وناسة')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت شات شيل -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/htxh1RzJ/Screenshot-Google.jpg" alt="شات شيل" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">شات شيل</h3>
+  <input type="number" id="qty_شات_شيل" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_شات_شيل" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('شات شيل', 'qty_شات_شيل', 'pay_شات_شيل')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت لايت شات -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/d0Y3WNr5/Screenshot-Google.jpg" alt="لايت شات" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">لايت شات</h3>
+  <input type="number" id="qty_لايت_شات" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_لايت_شات" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('لايت شات', 'qty_لايت_شات', 'pay_لايت_شات')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div><!-- كرت ازال لايف -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/VN0yCzdT/Screenshot-Google.jpg" alt="ازال لايف" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">ازال لايف</h3>
+  <input type="number" id="qty_ازال_لايف" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_ازال_لايف" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('ازال لايف', 'qty_ازال_لايف', 'pay_ازال_لايف')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت بوبو شات -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/nLyyKNmL/Screenshot-Google.jpg" alt="بوبو شات" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">بوبو شات</h3>
+  <input type="number" id="qty_بوبو_شات" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_بوبو_شات" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('بوبو شات', 'qty_بوبو_شات', 'pay_بوبو_شات')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت جيمي لايف -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/j5yGMv64/Screenshot-Google.jpg" alt="جيمي لايف" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">جيمي لايف</h3>
+  <input type="number" id="qty_جيمي_لايف" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_جيمي_لايف" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('جيمي لايف', 'qty_جيمي_لايف', 'pay_جيمي_لايف')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت سلام شات -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/Xq3tmFQS/Screenshot-Google.jpg" alt="سلام شات" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">سلام شات</h3>
+  <input type="number" id="qty_سلام_شات" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_سلام_شات" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('سلام شات', 'qty_سلام_شات', 'pay_سلام_شات')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت هله شات -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/Xq8tbJzZ/Screenshot-Google.jpg" alt="هله شات" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">هله شات</h3>
+  <input type="number" id="qty_هله_شات" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_هله_شات" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('هله شات', 'qty_هله_شات', 'pay_هله_شات')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div><!-- كرت هلا شات -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/y6XM9Q8V/Screenshot-Google.jpg" alt="هلا شات" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">هلا شات</h3>
+  <input type="number" id="qty_هلا_شات" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_هلا_شات" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('هلا شات', 'qty_هلا_شات', 'pay_هلا_شات')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت سباراتي -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/X7jTgfr9/Screenshot-Google.jpg" alt="سباراتي" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">سباراتي</h3>
+  <input type="number" id="qty_سباراتي" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_سباراتي" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('سباراتي', 'qty_سباراتي', 'pay_سباراتي')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت سوالفنا شات -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/HkjRqT4x/Screenshot-Google.jpg" alt="سوالفنا شات" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">سوالفنا شات</h3>
+  <input type="number" id="qty_سوالفنا_شات" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_سوالفنا_شات" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('سوالفنا شات', 'qty_سوالفنا_شات', 'pay_سوالفنا_شات')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت الو شات -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/rFf7ZD43/Screenshot-Google.jpg" alt="الو شات" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">الو شات</h3>
+  <input type="number" id="qty_الو_شات" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_الو_شات" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('الو شات', 'qty_الو_شات', 'pay_الو_شات')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت فيكو -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/NjVSYZpx/Screenshot-Google.jpg" alt="فيكو" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">فيكو</h3>
+  <input type="number" id="qty_فيكو" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_فيكو" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('فيكو', 'qty_فيكو', 'pay_فيكو')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div><!-- كرت ليلى -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/q73Y7QFH/Screenshot-Google.jpg" alt="ليلى" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">ليلى</h3>
+  <input type="number" id="qty_ليلى" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_ليلى" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('ليلى', 'qty_ليلى', 'pay_ليلى')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت كوكو لايف -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/cHGztwqg/Screenshot-Google.jpg" alt="كوكو لايف" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">كوكو لايف</h3>
+  <input type="number" id="qty_كوكو_لايف" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_كوكو_لايف" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('كوكو لايف', 'qty_كوكو_لايف', 'pay_كوكو_لايف')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت ALULU CHAT -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/25QwJtJy/Screenshot-Google.jpg" alt="ALULU CHAT" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">ALULU CHAT</h3>
+  <input type="number" id="qty_ALULU_CHAT" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_ALULU_CHAT" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('ALULU CHAT', 'qty_ALULU_CHAT', 'pay_ALULU_CHAT')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت MaanChat -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/7hWM0rCs/Screenshot-Google.jpg" alt="MaanChat" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">MaanChat</h3>
+  <input type="number" id="qty_MaanChat" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_MaanChat" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('MaanChat', 'qty_MaanChat', 'pay_MaanChat')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت WEGO -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/5y0SX2tQ/Screenshot-Google.jpg" alt="WEGO" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">WEGO</h3>
+  <input type="number" id="qty_WEGO" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_WEGO" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('WEGO', 'qty_WEGO', 'pay_WEGO')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div><!-- كرت YooY -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/xCgPjz9S/Screenshot-Google.jpg" alt="YooY" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">YooY</h3>
+  <input type="number" id="qty_YooY" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_YooY" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('YooY', 'qty_YooY', 'pay_YooY')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت GOLD CHAT -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/W3snPnLn/Screenshot-Google.jpg" alt="GOLD CHAT" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">GOLD CHAT</h3>
+  <input type="number" id="qty_GOLD_CHAT" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_GOLD_CHAT" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('GOLD CHAT', 'qty_GOLD_CHAT', 'pay_GOLD_CHAT')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت TAALA CHAT -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/tRSzLWr3/Screenshot-Google.jpg" alt="TAALA CHAT" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">TAALA CHAT</h3>
+  <input type="number" id="qty_TAALA_CHAT" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_TAALA_CHAT" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('TAALA CHAT', 'qty_TAALA_CHAT', 'pay_TAALA_CHAT')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت Sango Chat -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/CLR4Y5tW/Screenshot-Google.jpg" alt="Sango Chat" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">Sango Chat</h3>
+  <input type="number" id="qty_Sango_Chat" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_Sango_Chat" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('Sango Chat', 'qty_Sango_Chat', 'pay_Sango_Chat')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت YAAHLAN CHAT -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/c4PBJZG6/Screenshot-Google.jpg" alt="YAAHLAN CHAT" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">YAAHLAN CHAT</h3>
+  <input type="number" id="qty_YAAHLAN_CHAT" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_YAAHLAN_CHAT" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('YAAHLAN CHAT', 'qty_YAAHLAN_CHAT', 'pay_YAAHLAN_CHAT')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div><!-- كرت SUGO -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/dVdmkXJ6/Screenshot-Google.jpg" alt="SUGO" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">SUGO</h3>
+  <input type="number" id="qty_SUGO" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_SUGO" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('SUGO', 'qty_SUGO', 'pay_SUGO')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت Nabd live -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/xd2GKRC2/Screenshot-Google.jpg" alt="Nabd live" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">Nabd live</h3>
+  <input type="number" id="qty_Nabd_live" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_Nabd_live" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('Nabd live', 'qty_Nabd_live', 'pay_Nabd_live')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت Karawan -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/BvBTNKL1/Screenshot-Google.jpg" alt="Karawan" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">Karawan</h3>
+  <input type="number" id="qty_Karawan" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_Karawan" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('Karawan', 'qty_Karawan', 'pay_Karawan')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت Hayyakom Chat -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/wvxhrjL4/Screenshot-Google.jpg" alt="Hayyakom Chat" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">Hayyakom Chat</h3>
+  <input type="number" id="qty_Hayyakom_Chat" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_Hayyakom_Chat" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('Hayyakom Chat', 'qty_Hayyakom_Chat', 'pay_Hayyakom_Chat')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت Wyak -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/qRm8HHGJ/Screenshot-Google.jpg" alt="Wyak" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">Wyak</h3>
+  <input type="number" id="qty_Wyak" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_Wyak" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('Wyak', 'qty_Wyak', 'pay_Wyak')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div><!-- كرت Soyo -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/RhNwMpPc/Screenshot-Google.jpg" alt="Soyo" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">Soyo</h3>
+  <input type="number" id="qty_Soyo" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_Soyo" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('Soyo', 'qty_Soyo', 'pay_Soyo')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت Chirp Chat -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/kGzKDNZL/Screenshot-Google.jpg" alt="Chirp Chat" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">Chirp Chat</h3>
+  <input type="number" id="qty_Chirp_Chat" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_Chirp_Chat" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('Chirp Chat', 'qty_Chirp_Chat', 'pay_Chirp_Chat')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت Mango Live -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/J72bTmnK/Screenshot-Google.jpg" alt="Mango Live" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">Mango Live</h3>
+  <input type="number" id="qty_Mango_Live" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_Mango_Live" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('Mango Live', 'qty_Mango_Live', 'pay_Mango_Live')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت Echo Chat -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/YqLQZVL7/Screenshot-Google.jpg" alt="Echo Chat" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">Echo Chat</h3>
+  <input type="number" id="qty_Echo_Chat" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_Echo_Chat" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('Echo Chat', 'qty_Echo_Chat', 'pay_Echo_Chat')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت Ifun Chat -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/HkGbg2by/Screenshot-Google.jpg" alt="Ifun Chat" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">Ifun Chat</h3>
+  <input type="number" id="qty_Ifun_Chat" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_Ifun_Chat" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('Ifun Chat', 'qty_Ifun_Chat', 'pay_Ifun_Chat')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div><!-- كرت Haza Chat -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/nhvBcD1w/Screenshot-Google.jpg" alt="Haza Chat" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">Haza Chat</h3>
+  <input type="number" id="qty_Haza_Chat" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_Haza_Chat" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('Haza Chat', 'qty_Haza_Chat', 'pay_Haza_Chat')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت PartyU -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/Zq43957Y/Screenshot-Google.jpg" alt="PartyU" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">PartyU</h3>
+  <input type="number" id="qty_PartyU" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_PartyU" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('PartyU', 'qty_PartyU', 'pay_PartyU')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت Lions chat -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/QdTZyp3C/Screenshot-Google.jpg" alt="Lions chat" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">Lions chat</h3>
+  <input type="number" id="qty_Lions_chat" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_Lions_chat" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('Lions chat', 'qty_Lions_chat', 'pay_Lions_chat')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت Yolo Chat -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/RFMrhynJ/Screenshot-Google.jpg" alt="Yolo Chat" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">Yolo Chat</h3>
+  <input type="number" id="qty_Yolo_Chat" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_Yolo_Chat" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('Yolo Chat', 'qty_Yolo_Chat', 'pay_Yolo_Chat')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت Hami Party -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/cJGGyrxm/Screenshot-Google.jpg" alt="Hami Party" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">Hami Party</h3>
+  <input type="number" id="qty_Hami_Party" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_Hami_Party" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('Hami Party', 'qty_Hami_Party', 'pay_Hami_Party')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div><!-- كرت Kafu -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/mr3fbBhG/Screenshot-Google.jpg" alt="Kafu" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">Kafu</h3>
+  <input type="number" id="qty_Kafu" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_Kafu" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('Kafu', 'qty_Kafu', 'pay_Kafu')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت Gala Star -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/Y985WR1n/Screenshot-Google.jpg" alt="Gala Star" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">Gala Star</h3>
+  <input type="number" id="qty_Gala_Star" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_Gala_Star" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('Gala Star', 'qty_Gala_Star', 'pay_Gala_Star')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت Westar -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/rsmvC4j8/Screenshot-Google.jpg" alt="Westar" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">Westar</h3>
+  <input type="number" id="qty_Westar" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_Westar" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('Westar', 'qty_Westar', 'pay_Westar')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت Falla Chat -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/VvV27NZX/Screenshot-Google.jpg" alt="Falla Chat" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">Falla Chat</h3>
+  <input type="number" id="qty_Falla_Chat" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_Falla_Chat" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('Falla Chat', 'qty_Falla_Chat', 'pay_Falla_Chat')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت Hala Me -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/WpYRp9pt/Screenshot-Google.jpg" alt="Hala Me" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">Hala Me</h3>
+  <input type="number" id="qty_Hala_Me" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_Hala_Me" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('Hala Me', 'qty_Hala_Me', 'pay_Hala_Me')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div><!-- كرت SoMatch -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/dthbh8D6/Screenshot-Google.jpg" alt="SoMatch" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">SoMatch</h3>
+  <input type="number" id="qty_SoMatch" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_SoMatch" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('SoMatch', 'qty_SoMatch', 'pay_SoMatch')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت Aria -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/fT16mJ9N/Screenshot-Google.jpg" alt="Aria" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">Aria</h3>
+  <input type="number" id="qty_Aria" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_Aria" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('Aria', 'qty_Aria', 'pay_Aria')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت Soulstar -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/136bHsGN/Screenshot-Google.jpg" alt="Soulstar" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">Soulstar</h3>
+  <input type="number" id="qty_Soulstar" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_Soulstar" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('Soulstar', 'qty_Soulstar', 'pay_Soulstar')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت Carni Live -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/fbNpqpCq/Screenshot-Google.jpg" alt="Carni Live" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">Carni Live</h3>
+  <input type="number" id="qty_Carni_Live" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_Carni_Live" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('Carni Live', 'qty_Carni_Live', 'pay_Carni_Live')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت Hi Play -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/PqQcgyFX/Screenshot-Google.jpg" alt="Hi Play" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">Hi Play</h3>
+  <input type="number" id="qty_Hi_Play" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_Hi_Play" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('Hi Play', 'qty_Hi_Play', 'pay_Hi_Play')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div><!-- كرت ASHA Live -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/509GbzZw/Screenshot-Google.jpg" alt="ASHA Live" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">ASHA Live</h3>
+  <input type="number" id="qty_ASHA_Live" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_ASHA_Live" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('ASHA Live', 'qty_ASHA_Live', 'pay_ASHA_Live')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت Higo Live -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/nzdWzzJN/Screenshot-Google.jpg" alt="Higo Live" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">Higo Live</h3>
+  <input type="number" id="qty_Higo_Live" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_Higo_Live" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('Higo Live', 'qty_Higo_Live', 'pay_Higo_Live')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت Chamet -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/MHvFjSZH/Screenshot-Google.jpg" alt="Chamet" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">Chamet</h3>
+  <input type="number" id="qty_Chamet" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_Chamet" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('Chamet', 'qty_Chamet', 'pay_Chamet')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت Amo Chat -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/C5X6GQdN/Screenshot-Google.jpg" alt="Amo Chat" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">Amo Chat</h3>
+  <input type="number" id="qty_Amo_Chat" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_Amo_Chat" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('Amo Chat', 'qty_Amo_Chat', 'pay_Amo_Chat')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت FoFo Chat -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/kMpZPBwb/Screenshot-Google.jpg" alt="FoFo Chat" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">FoFo Chat</h3>
+  <input type="number" id="qty_FoFo_Chat" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_FoFo_Chat" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('FoFo Chat', 'qty_FoFo_Chat', 'pay_FoFo_Chat')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div><!-- كرت Layam Chat -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/gkL7zmBB/Screenshot-Google.jpg" alt="Layam Chat" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">Layam Chat</h3>
+  <input type="number" id="qty_Layam_Chat" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_Layam_Chat" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('Layam Chat', 'qty_Layam_Chat', 'pay_Layam_Chat')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت Pocket Chat -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/bvpV9bYK/Screenshot-Google.jpg" alt="Pocket Chat" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">Pocket Chat</h3>
+  <input type="number" id="qty_Pocket_Chat" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_Pocket_Chat" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('Pocket Chat', 'qty_Pocket_Chat', 'pay_Pocket_Chat')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت Party Hero -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/HkQPM3mw/Screenshot-Google.jpg" alt="Party Hero" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">Party Hero</h3>
+  <input type="number" id="qty_Party_Hero" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_Party_Hero" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('Party Hero', 'qty_Party_Hero', 'pay_Party_Hero')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت Wasla Chat -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/cLqb62p1/Screenshot-Google.jpg" alt="Wasla Chat" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">Wasla Chat</h3>
+  <input type="number" id="qty_Wasla_Chat" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_Wasla_Chat" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('Wasla Chat', 'qty_Wasla_Chat', 'pay_Wasla_Chat')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت Opa Live -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/TYHW9XdG/Screenshot-Google.jpg" alt="Opa Live" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">Opa Live</h3>
+  <input type="number" id="qty_Opa_Live" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_Opa_Live" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('Opa Live', 'qty_Opa_Live', 'pay_Opa_Live')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div><!-- كرت Hi Party -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/cJfg0gQ4/Screenshot-Google.jpg" alt="Hi Party" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">Hi Party</h3>
+  <input type="number" id="qty_Hi_Party" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_Hi_Party" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('Hi Party', 'qty_Hi_Party', 'pay_Hi_Party')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت Mazyoun Zeina -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/W3jD3Nnm/Screenshot-Google.jpg" alt="Mazyoun Zeina" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">Mazyoun Zeina</h3>
+  <input type="number" id="qty_Mazyoun_Zeina" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_Mazyoun_Zeina" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('Mazyoun Zeina', 'qty_Mazyoun_Zeina', 'pay_Mazyoun_Zeina')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت Gamet Live -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/pLwhwY56/Screenshot-Google.jpg" alt="Gamet Live" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">Gamet Live</h3>
+  <input type="number" id="qty_Gamet_Live" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_Gamet_Live" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('Gamet Live', 'qty_Gamet_Live', 'pay_Gamet_Live')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت Imu Chat -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/sgQGH0xW/Screenshot-Google.jpg" alt="Imu Chat" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">Imu Chat</h3>
+  <input type="number" id="qty_Imu_Chat" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_Imu_Chat" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('Imu Chat', 'qty_Imu_Chat', 'pay_Imu_Chat')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت Yami Star -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/9MpDw686/Screenshot-Google.jpg" alt="Yami Star" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">Yami Star</h3>
+  <input type="number" id="qty_Yami_Star" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_Yami_Star" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('Yami Star', 'qty_Yami_Star', 'pay_Yami_Star')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div><!-- كرت Moli Star -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/zvGVCx4V/Screenshot-Google.jpg" alt="Moli Star" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">Moli Star</h3>
+  <input type="number" id="qty_Moli_Star" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_Moli_Star" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('Moli Star', 'qty_Moli_Star', 'pay_Moli_Star')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت Nawa Live -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/prcyqDtk/Screenshot-Google.jpg" alt="Nawa Live" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">Nawa Live</h3>
+  <input type="number" id="qty_Nawa_Live" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_Nawa_Live" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('Nawa Live', 'qty_Nawa_Live', 'pay_Nawa_Live')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>
+
+<!-- كرت Star Maker -->
+<div style="background: #222; padding: 20px; border-radius: 15px; width: 220px; box-shadow: 0 2px 8px rgba(255,215,0,0.3); text-align: center;">
+  <img src="https://i.postimg.cc/sfTBjRZS/Screenshot-Google.jpg" alt="Star Maker" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; border: 2px solid gold; margin-bottom: 10px;">
+  <h3 style="color: #00e0d0; font-size: 18px;">Star Maker</h3>
+  <input type="number" id="qty_Star_Maker" placeholder="ادخل الكمية" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+  <select id="pay_Star_Maker" style="width: 100%; padding: 8px; background: #333; color: white; border: none; border-radius: 8px; margin-bottom: 10px;">
+    <option disabled selected>اختر طريقة الدفع</option>
+    <option>Binance</option>
+    <option>USDT (TRC20)</option>
+    <option>Wish</option>
+    <option>USDT (BEP20)</option>
+  </select>
+  <button onclick="sendOrder('Star Maker', 'qty_Star_Maker', 'pay_Star_Maker')" style="width: 100%; padding: 10px; background: gold; color: black; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">اطلب عبر واتساب</button>
+</div>

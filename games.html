@@ -1,0 +1,127 @@
+<!DOCTYPE html><html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>قسم الألعاب - Naif alabas</title>
+  <style>
+    body {
+      font-family: 'Tahoma', sans-serif;
+      background: #111;
+      color: white;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: gold;
+      margin-bottom: 30px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .card {
+      background: #222;
+      border-radius: 15px;
+      text-align: center;
+      padding: 20px;
+    }
+    .card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      border: 2px solid gold;
+    }
+    .card h2 {
+      margin-bottom: 10px;
+      color: #00e0d0;
+    }
+    .card input, .card select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 6px;
+      background-color: #333;
+      color: white;
+    }
+    .card button {
+      background-color: gold;
+      color: black;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .card button:hover {
+      background-color: #e6c200;
+    }
+  </style>
+</head>
+<body><h1>قسم الألعاب</h1><div class="grid"><!-- هنا يتم إدخال البطاقات --></div><script>
+const games = [
+  {name: 'Free Fire', id: 'freefire', img: 'https://i.postimg.cc/wvwLC2Qc/Screenshot-Google.jpg'},
+  {name: 'PUBG Mobile', id: 'pubg', img: 'https://i.postimg.cc/0j3mQN3z/Screenshot-Google.jpg'},
+  {name: 'Call of Duty', id: 'cod', img: 'https://i.postimg.cc/xjFLgsC9/Screenshot-Google.jpg'},
+  {name: 'Valorant', id: 'valorant', img: 'https://i.postimg.cc/J0tZMXTw/Screenshot-Google.jpg'},
+  {name: 'Arena Breakout', id: 'arena', img: 'https://i.postimg.cc/02MD4pMD/Screenshot-Google.jpg'},
+  {name: 'نداء الحرب', id: 'warcall', img: 'https://i.postimg.cc/RZwfS4T0/Screenshot-Google.jpg'},
+  {name: 'كلاش أوف كلانس', id: 'clash', img: 'https://i.postimg.cc/zXsKYVKM/Screenshot-Google.jpg'},
+  {name: 'كلاش رويال', id: 'royale', img: 'https://i.postimg.cc/43Zcnq8Q/Screenshot-Google.jpg'},
+  {name: 'عصر الأساطير', id: 'mythage', img: 'https://i.postimg.cc/Xv8C5LmS/Screenshot-Google.jpg'},
+  {name: 'War Robots', id: 'warrobots', img: 'https://i.postimg.cc/V6kbWMPS/Screenshot-Google.jpg'},
+  {name: 'State of Survival', id: 'state', img: 'https://i.postimg.cc/5yHYZV0b/Screenshot-Google.jpg'},
+  {name: 'Infinity Kingdom', id: 'infinity', img: 'https://i.postimg.cc/dQXTGLH1/Screenshot-Google.jpg'},
+  {name: 'جواكر', id: 'jawaker', img: 'https://i.postimg.cc/4d2HLdXW/Screenshot-Google.jpg'},
+  {name: 'هاي داي', id: 'hayday', img: 'https://i.postimg.cc/1XLnSjn6/Screenshot-Google.jpg'},
+  {name: 'Ball Pool 8', id: 'pool8', img: 'https://i.postimg.cc/vHVxhbkv/Screenshot-Google.jpg'},
+  {name: 'Ludo Club', id: 'ludo', img: 'https://i.postimg.cc/RZx6b2zx/Screenshot-Google.jpg'},
+  {name: 'يلا لودو مجوهرات', id: 'blaludo', img: 'https://i.postimg.cc/q7ktpnRm/Screenshot-Google.jpg'},
+  {name: 'يالا لودو ذهب', id: 'yallaludo', img: 'https://i.postimg.cc/Jz3DwK1D/Screenshot-Google.jpg'},
+  {name: 'Mobile Legends', id: 'mobilelegends', img: 'https://i.postimg.cc/6QY8q34B/Screenshot-Google.jpg'},
+  {name: 'Brawl Stars', id: 'brawl', img: 'https://i.postimg.cc/hjvfdBVT/Screenshot-Google.jpg'},
+  {name: 'فيفا موبايل إف سي', id: 'fifa', img: 'https://i.postimg.cc/sXL1PNJ8/Screenshot-Google.jpg'}
+];
+
+const grid = document.querySelector('.grid');
+
+const paymentMethods = `
+  <option disabled selected>اختر طريقة الدفع</option>
+  <option>Binance</option>
+  <option>USDT (TRC20)</option>
+  <option>Wish</option>
+  <option>USDT (BEP20)</option>
+`;
+
+games.forEach(game => {
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.innerHTML = `
+    <img src="${game.img}" alt="${game.name}">
+    <h2>${game.name}</h2>
+    <input type="number" id="qty_${game.id}" placeholder="أدخل الكمية">
+    <select id="pay_${game.id}">
+      ${paymentMethods}
+    </select>
+    <button onclick="sendOrder('${game.name}', 'qty_${game.id}', 'pay_${game.id}')">اطلب عبر واتساب</button>
+  `;
+  grid.appendChild(card);
+});
+
+function sendOrder(name, qtyId, payId) {
+  const qty = document.getElementById(qtyId).value;
+  const pay = document.getElementById(payId).value;
+
+  if (!qty || !pay) {
+    alert('يرجى إدخال الكمية واختيار طريقة الدفع.');
+    return;
+  }
+
+  const message = `أرغب بشحن لعبة ${name}%0Aالكمية: ${qty}%0Aطريقة الدفع: ${pay}`;
+  window.open(`https://wa.me/96170283696?text=${message}`, '_blank');
+}
+</script></body>
+</html>

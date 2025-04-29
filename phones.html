@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>قسم الأرقام الوهمية - Naif alabas</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background-color: #111;
+      color: white;
+      font-family: Tahoma, sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+      color: gold;
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #222;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+      border: 2px solid gold;
+    }
+
+    .card h2 {
+      font-size: 18px;
+      color: #00e0d0;
+      margin-bottom: 10px;
+    }
+
+    .card input,
+    .card select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      border: none;
+      background-color: #333;
+      color: white;
+    }
+
+    .card button {
+      background-color: #ffd700;
+      color: black;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .card button:hover {
+      background-color: #e6c200;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>قسم الأرقام الوهمية</h1>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="https://i.postimg.cc/cJKGtydh/Screenshot-Google.jpg" alt="أرقام واتساب">
+      <h2>أرقام واتساب أجنبية</h2>
+      <input type="number" placeholder="أدخل الكمية المطلوبة" id="qty1" />
+      <select id="pay1">
+        <option disabled selected>اختر طريقة الدفع</option>
+        <option>Binance</option>
+        <option>USDT (TRC20)</option>
+        <option>Wish</option>
+        <option>USDT (BEP20)</option>
+      </select>
+      <button onclick="sendOrder('أرقام واتساب أجنبية', 'qty1', 'pay1')">اطلب عبر واتساب</button>
+    </div>
+
+    <div class="card">
+      <img src="https://i.postimg.cc/0jVVCjfw/Screenshot-Google.jpg" alt="تفعيل فيسبوك">
+      <h2>أرقام تفعيل فيسبوك</h2>
+      <input type="number" placeholder="أدخل الكمية المطلوبة" id="qty2" />
+      <select id="pay2">
+        <option disabled selected>اختر طريقة الدفع</option>
+        <option>Binance</option>
+        <option>USDT (TRC20)</option>
+        <option>Wish</option>
+        <option>USDT (BEP20)</option>
+      </select>
+      <button onclick="sendOrder('أرقام تفعيل فيسبوك', 'qty2', 'pay2')">اطلب عبر واتساب</button>
+    </div>
+
+    <div class="card">
+      <img src="https://i.postimg.cc/28JwjPXr/Screenshot-Google.jpg" alt="فك حظر واتساب">
+      <h2>فك حظر واتساب</h2>
+      <input type="number" placeholder="أدخل الكمية المطلوبة" id="qty3" />
+      <select id="pay3">
+        <option disabled selected>اختر طريقة الدفع</option>
+        <option>Binance</option>
+        <option>USDT (TRC20)</option>
+        <option>Wish</option>
+        <option>USDT (BEP20)</option>
+      </select>
+      <button onclick="sendOrder('فك حظر واتساب', 'qty3', 'pay3')">اطلب عبر واتساب</button>
+    </div>
+
+  </div>
+
+  <script>
+    function sendOrder(service, qtyId, payId) {
+      const qty = document.getElementById(qtyId).value;
+      const pay = document.getElementById(payId).value;
+
+      if (!qty || !pay) {
+        alert("يرجى إدخال الكمية واختيار طريقة الدفع.");
+        return;
+      }
+
+      const message = `أرغب بطلب ${service}%0Aالكمية: ${qty}%0Aطريقة الدفع: ${pay}`;
+      window.open(`https://wa.me/96170283696?text=${message}`, "_blank");
+    }
+  </script>
+
+</body>
+</html>

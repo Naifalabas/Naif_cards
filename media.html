@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>قسم السوشيال ميديا</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Tahoma, sans-serif;
+      background-color: #111;
+      color: white;
+    }
+    h1 {
+      text-align: center;
+      color: gold;
+      margin-bottom: 30px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background-color: #222;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+    }
+    .card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      border: 2px solid gold;
+    }
+    .card h2 {
+      color: #00e0d0;
+      margin-bottom: 10px;
+    }
+    .card input, .card select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 6px;
+      background-color: #333;
+      color: white;
+    }
+    .card button {
+      background-color: gold;
+      color: black;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .card button:hover {
+      background-color: #e6c200;
+    }
+  </style>
+</head>
+<body>
+
+<h1>قسم السوشيال ميديا</h1>
+
+<div class="grid">
+
+  <div class="card">
+    <img src="https://i.postimg.cc/05BvXxxb/Screenshot-Google.jpg" alt="مشاهدات تيك توك">
+    <h2>مشاهدات تيك توك</h2>
+    <input type="number" id="qty1" placeholder="أدخل الكمية المطلوبة">
+    <select id="pay1">
+      <option disabled selected>اختر طريقة الدفع</option>
+      <option>Binance</option>
+      <option>USDT (TRC20)</option>
+      <option>Wish</option>
+      <option>USDT (BEP20)</option>
+    </select>
+    <button onclick="sendOrder('مشاهدات تيك توك', 'qty1', 'pay1')">اطلب عبر واتساب</button>
+  </div>
+
+  <div class="card">
+    <img src="https://i.postimg.cc/xTN2W7Tg/Screenshot-Google.jpg" alt="لايكات تيك توك">
+    <h2>لايكات تيك توك</h2>
+    <input type="number" id="qty2" placeholder="أدخل الكمية المطلوبة">
+    <select id="pay2">
+      <option disabled selected>اختر طريقة الدفع</option>
+      <option>Binance</option>
+      <option>USDT (TRC20)</option>
+      <option>Wish</option>
+      <option>USDT (BEP20)</option>
+    </select>
+    <button onclick="sendOrder('لايكات تيك توك', 'qty2', 'pay2')">اطلب عبر واتساب</button>
+  </div>
+
+  <div class="card">
+    <img src="https://i.postimg.cc/kgxd5bSb/Screenshot-Google.jpg" alt="متابعين تيك توك">
+    <h2>متابعين تيك توك</h2>
+    <input type="number" id="qty3" placeholder="أدخل الكمية المطلوبة">
+    <select id="pay3">
+      <option disabled selected>اختر طريقة الدفع</option>
+      <option>Binance</option>
+      <option>USDT (TRC20)</option>
+      <option>Wish</option>
+      <option>USDT (BEP20)</option>
+    </select>
+    <button onclick="sendOrder('متابعين تيك توك', 'qty3', 'pay3')">اطلب عبر واتساب</button>
+  </div>
+
+  <div class="card">
+    <img src="https://i.postimg.cc/Dzn34wQY/Screenshot-Google.jpg" alt="مشاهدات فيسبوك">
+    <h2>مشاهدات فيسبوك</h2>
+    <input type="number" id="qty4" placeholder="أدخل الكمية المطلوبة">
+    <select id="pay4">
+      <option disabled selected>اختر طريقة الدفع</option>
+      <option>Binance</option>
+      <option>USDT (TRC20)</option>
+      <option>Wish</option>
+      <option>USDT (BEP20)</option>
+    </select>
+    <button onclick="sendOrder('مشاهدات فيسبوك', 'qty4', 'pay4')">اطلب عبر واتساب</button>
+  </div>
+
+  <div class="card">
+    <img src="https://i.postimg.cc/N0Dq6vpG/Screenshot-Google.jpg" alt="لايكات فيسبوك">
+    <h2>لايكات فيسبوك</h2>
+    <input type="number" id="qty5" placeholder="أدخل الكمية المطلوبة">
+    <select id="pay5">
+      <option disabled selected>اختر طريقة الدفع</option>
+      <option>Binance</option>
+      <option>USDT (TRC20)</option>
+      <option>Wish</option>
+      <option>USDT (BEP20)</option>
+    </select>
+    <button onclick="sendOrder('لايكات فيسبوك', 'qty5', 'pay5')">اطلب عبر واتساب</button>
+  </div>
+
+  <div class="card">
+    <img src="https://i.postimg.cc/Y045BGkj/Screenshot-Google.jpg" alt="متابعين فيسبوك">
+    <h2>متابعين فيسبوك</h2>
+    <input type="number" id="qty6" placeholder="أدخل الكمية المطلوبة">
+    <select id="pay6">
+      <option disabled selected>اختر طريقة الدفع</option>
+      <option>Binance</option>
+      <option>USDT (TRC20)</option>
+      <option>Wish</option>
+      <option>USDT (BEP20)</option>
+    </select>
+    <button onclick="sendOrder('متابعين فيسبوك', 'qty6', 'pay6')">اطلب عبر واتساب</button>
+  </div>
+
+  <div class="card">
+    <img src="https://i.postimg.cc/mk00LL2j/Screenshot-Google.jpg" alt="مشاهدات انستغرام">
+    <h2>مشاهدات انستغرام</h2>
+    <input type="number" id="qty7" placeholder="أدخل الكمية المطلوبة">
+    <select id="pay7">
+      <option disabled selected>اختر طريقة الدفع</option>
+      <option>Binance</option>
+      <option>USDT (TRC20)</option>
+      <option>Wish</option>
+      <option>USDT (BEP20)</option>
+    </select>
+    <button onclick="sendOrder('مشاهدات انستغرام', 'qty7', 'pay7')">اطلب عبر واتساب</button>
+  </div>
+
+  <div class="card">
+    <img src="https://i.postimg.cc/c4npDnXb/Screenshot-Google.jpg" alt="لايكات انستغرام">
+    <h2>لايكات انستغرام</h2>
+    <input type="number" id="qty8" placeholder="أدخل الكمية المطلوبة">
+    <select id="pay8">
+      <option disabled selected>اختر طريقة الدفع</option>
+      <option>Binance</option>
+      <option>USDT (TRC20)</option>
+      <option>Wish</option>
+      <option>USDT (BEP20)</option>
+    </select>
+    <button onclick="sendOrder('لايكات انستغرام', 'qty8', 'pay8')">اطلب عبر واتساب</button>
+  </div>
+
+  <div class="card">
+    <img src="https://i.postimg.cc/jjsBdkKp/Screenshot-Google.jpg" alt="متابعين انستغرام">
+    <h2>متابعين انستغرام</h2>
+    <input type="number" id="qty9" placeholder="أدخل الكمية المطلوبة">
+    <select id="pay9">
+      <option disabled selected>اختر طريقة الدفع</option>
+      <option>Binance</option>
+      <option>USDT (TRC20)</option>
+      <option>Wish</option>
+      <option>USDT (BEP20)</option>
+    </select>
+    <button onclick="sendOrder('متابعين انستغرام', 'qty9', 'pay9')">اطلب عبر واتساب</button>
+  </div>
+
+</div>
+
+<script>
+  function sendOrder(name, qtyId, payId) {
+    const qty = document.getElementById(qtyId).value;
+    const pay = document.getElementById(payId).value;
+
+    if (!qty || !pay) {
+      alert("يرجى إدخال الكمية واختيار طريقة الدفع.");
+      return;
+    }
+
+    const message = `أرغب بطلب ${name}%0Aالكمية: ${qty}%0Aطريقة الدفع: ${pay}`;
+    window.open(`https://wa.me/96170283696?text=${message}`, '_blank');
+  }
+</script>
+
+</body>
+</html>

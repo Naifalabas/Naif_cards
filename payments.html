@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>قسم الدفع الإلكتروني - Naif alabas</title>
+  <style>
+    body {
+      background-color: #111;
+      color: white;
+      font-family: 'Tahoma', sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: gold;
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #1e1e1e;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.1);
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: contain;
+      background-color: white;
+      padding: 5px;
+      border: 3px solid gold;
+      margin-bottom: 15px;
+    }
+
+    .card h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #00e0d0;
+    }
+
+    .card input, .card textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 8px;
+      background-color: #333;
+      color: white;
+    }
+
+    .card button {
+      background-color: gold;
+      color: black;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .card button:hover {
+      background-color: #e6c200;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>قسم الدفع الإلكتروني</h1>
+  <div class="grid">
+
+    <!-- نموذج كرت واحد مع تكرار للخدمات -->
+
+    <div class="card">
+      <img src="https://i.postimg.cc/j52zHcDR/Screenshot-Google.jpg" />
+      <h2>Perfect Money</h2>
+      <input type="number" id="qty1" placeholder="أدخل الكمية المطلوبة">
+      <textarea id="details1" placeholder="أدخل معلومات أو تفاصيل الدفع"></textarea>
+      <button onclick="sendOrder('Perfect Money', 'qty1', 'details1')">اطلب عبر واتساب</button>
+    </div>
+
+    <div class="card">
+      <img src="https://i.postimg.cc/Gty6Bc87/Screenshot-Google.jpg" />
+      <h2>بايسل</h2>
+      <input type="number" id="qty2">
+      <textarea id="details2" placeholder="أدخل معلومات أو تفاصيل الدفع"></textarea>
+      <button onclick="sendOrder('بايسل', 'qty2', 'details2')">اطلب عبر واتساب</button>
+    </div>
+
+    <div class="card">
+      <img src="https://i.postimg.cc/mZCdFpp5/Screenshot-Google.jpg" />
+      <h2>Payeer</h2>
+      <input type="number" id="qty3">
+      <textarea id="details3" placeholder="أدخل معلومات أو تفاصيل الدفع"></textarea>
+      <button onclick="sendOrder('Payeer', 'qty3', 'details3')">اطلب عبر واتساب</button>
+    </div>
+
+    <div class="card">
+      <img src="https://i.postimg.cc/Bb0Bgs7w/Screenshot-Google.jpg" />
+      <h2>Al-Haram Syria</h2>
+      <input type="number" id="qty4">
+      <textarea id="details4" placeholder="أدخل معلومات أو تفاصيل الدفع"></textarea>
+      <button onclick="sendOrder('Al-Haram Syria', 'qty4', 'details4')">اطلب عبر واتساب</button>
+    </div>
+
+    <div class="card">
+      <img src="https://i.postimg.cc/W4Y7Hzqm/Screenshot-Google.jpg" />
+      <h2>ببارا</h2>
+      <input type="number" id="qty5">
+      <textarea id="details5" placeholder="أدخل معلومات أو تفاصيل الدفع"></textarea>
+      <button onclick="sendOrder('ببارا', 'qty5', 'details5')">اطلب عبر واتساب</button>
+    </div>
+
+    <div class="card">
+      <img src="https://i.postimg.cc/t4wS60b8/Screenshot-Google.jpg" />
+      <h2>Paypal</h2>
+      <input type="number" id="qty6">
+      <textarea id="details6" placeholder="أدخل معلومات أو تفاصيل الدفع"></textarea>
+      <button onclick="sendOrder('Paypal', 'qty6', 'details6')">اطلب عبر واتساب</button>
+    </div>
+
+    <div class="card">
+      <img src="https://i.postimg.cc/Dy4RdVDY/Screenshot-Google.jpg" />
+      <h2>Ininal Kart</h2>
+      <input type="number" id="qty7">
+      <textarea id="details7" placeholder="أدخل معلومات أو تفاصيل الدفع"></textarea>
+      <button onclick="sendOrder('Ininal Kart', 'qty7', 'details7')">اطلب عبر واتساب</button>
+    </div>
+
+    <div class="card">
+      <img src="https://i.postimg.cc/wBWd4XkW/Screenshot-Google.jpg" />
+      <h2>Payoneer</h2>
+      <input type="number" id="qty8">
+      <textarea id="details8" placeholder="أدخل معلومات أو تفاصيل الدفع"></textarea>
+      <button onclick="sendOrder('Payoneer', 'qty8', 'details8')">اطلب عبر واتساب</button>
+    </div>
+
+    <div class="card">
+      <img src="https://i.postimg.cc/4yPvp3Gh/Screenshot-Google.jpg" />
+      <h2>Fups</h2>
+      <input type="number" id="qty9">
+      <textarea id="details9" placeholder="أدخل معلومات أو تفاصيل الدفع"></textarea>
+      <button onclick="sendOrder('Fups', 'qty9', 'details9')">اطلب عبر واتساب</button>
+    </div>
+
+    <div class="card">
+      <img src="https://i.postimg.cc/fRctcmQZ/Screenshot-Google.jpg" />
+      <h2>Tosla</h2>
+      <input type="number" id="qty10">
+      <textarea id="details10" placeholder="أدخل معلومات أو تفاصيل الدفع"></textarea>
+      <button onclick="sendOrder('Tosla', 'qty10', 'details10')">اطلب عبر واتساب</button>
+    </div>
+
+    <div class="card">
+      <img src="https://i.postimg.cc/DfRP5rHb/Screenshot-Google.jpg" />
+      <h2>Oldubil</h2>
+      <input type="number" id="qty11">
+      <textarea id="details11" placeholder="أدخل معلومات أو تفاصيل الدفع"></textarea>
+      <button onclick="sendOrder('Oldubil', 'qty11', 'details11')">اطلب عبر واتساب</button>
+    </div>
+
+    <div class="card">
+      <img src="https://i.postimg.cc/xCJbb70p/Screenshot-Google.jpg" />
+      <h2>Pokus</h2>
+      <input type="number" id="qty12">
+      <textarea id="details12" placeholder="أدخل معلومات أو تفاصيل الدفع"></textarea>
+      <button onclick="sendOrder('Pokus', 'qty12', 'details12')">اطلب عبر واتساب</button>
+    </div>
+
+    <div class="card">
+      <img src="https://i.postimg.cc/PfyFWX24/Screenshot-Google.jpg" />
+      <h2>USDT TRC20</h2>
+      <input type="number" id="qty13">
+      <textarea id="details13" placeholder="أدخل معلومات أو تفاصيل الدفع"></textarea>
+      <button onclick="sendOrder('USDT TRC20', 'qty13', 'details13')">اطلب عبر واتساب</button>
+    </div>
+
+  </div>
+
+  <script>
+    function sendOrder(service, qtyId, detailsId) {
+      const qty = document.getElementById(qtyId).value;
+      const details = document.getElementById(detailsId).value;
+
+      if (!qty || !details) {
+        alert("يرجى إدخال الكمية والتفاصيل");
+        return;
+      }
+
+      const message = `طلب قسم الدفع الإلكتروني\nالخدمة: ${service}\nالكمية: ${qty}\nتفاصيل الدفع: ${details}`;
+      window.open(`https://wa.me/96170283696?text=${encodeURIComponent(message)}`, "_blank");
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>قسم الدفع الإلكتروني - Naif alabas</title>
+  <style>
+    body {
+      font-family: 'Tahoma', sans-serif;
+      background: #111;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      color: #00f0ff;
+      margin-bottom: 30px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #222;
+      border-radius: 15px;
+      padding: 15px;
+      box-shadow: 0 0 10px rgba(0,255,255,0.1);
+    }
+    .card h2 {
+      margin: 0 0 10px;
+      color: #00e0d0;
+      font-size: 18px;
+    }
+    .card input {
+      width: 100%;
+      padding: 8px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: none;
+      background: #333;
+      color: white;
+    }
+    .card a {
+      display: inline-block;
+      background: #00c0ff;
+      padding: 10px 15px;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>قسم الدفع الإلكتروني</h1>
+    <div class="grid" id="payments"></div>
+  </div>
+  <script>
+    const services = [
+      "Payeer", "بايسل", "Perfect Money", "paypal", "papara - بابارا",
+      "Al-Haram Syria", "Fups", "Payoneer", "ininal kart", "pokus", 
+      "oldubil", "tosla", "Usdt trc 20"
+    ];
+    const grid = document.getElementById("payments");
+    services.forEach(name => {
+      grid.innerHTML += `
+        <div class="card">
+          <h2>${name}</h2>
+          <input type="number" placeholder="أدخل الكمية المطلوبة">
+          <a href="https://wa.me/96170283696?text=أرغب%20بطلب%20خدمة%20${encodeURIComponent(name)}">اطلب عبر واتساب</a>
+        </div>
+      `;
+    });
+  </script>
+</body>
+</html>

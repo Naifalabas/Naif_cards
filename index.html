@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naif alabas</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Tahoma', sans-serif;
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                  url('https://i.postimg.cc/MT7CS4f5/IMG-20250208-184110-622.webp') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .logo {
+      font-size: 72px;
+      font-weight: bold;
+      color: #ffd700;
+      margin-top: 80px;
+      text-shadow: 0 0 10px #ffd700, 0 0 20px #ffea00;
+      position: relative;
+      display: inline-block;
+    }
+
+    .logo::before {
+      content: '👑';
+      font-size: 32px;
+      position: absolute;
+      top: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .title {
+      font-size: 28px;
+      margin-top: 10px;
+      color: #ffffff;
+      text-shadow: 0 0 5px #ccc;
+    }
+
+    .welcome {
+      margin-top: 20px;
+      font-size: 20px;
+      color: #dddddd;
+    }
+
+    .button {
+      margin-top: 40px;
+      padding: 14px 32px;
+      background: linear-gradient(to right, #facc15, #f59e0b);
+      color: #000;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .button:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 20px #facc15;
+    }
+
+    .description {
+      margin-top: 30px;
+      padding: 0 20px;
+      font-size: 16px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">M</div>
+  <div class="title">Naif alabas</div>
+  <div class="welcome">مرحبا بك في موقع Naif alabas لشحن الألعاب والبرامج بسهولة وسرعة</div>
+  <a href="sections.html"><button class="button">دخول إلى الموقع</button></a>
+  <div class="description">
+    لدينا كافة خدمات شحن الألعاب والبرامج والبطاقات والدفع الإلكتروني<br>
+    ما عليك سوى الدخول إلى موقعنا وتجربته بنفسك
+  </div>
+</body>
+</html>

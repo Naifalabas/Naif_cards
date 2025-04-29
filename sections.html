@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naif alabas - الأقسام</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+                  url('https://i.postimg.cc/MT7CS4f5/IMG-20250208-184110-622.webp') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .logo {
+      font-size: 32px;
+      font-weight: bold;
+      color: gold;
+      text-align: center;
+      position: relative;
+      flex: 1;
+    }
+
+    .logo i {
+      position: absolute;
+      top: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 28px;
+    }
+
+    .site-name {
+      font-size: 20px;
+      position: absolute;
+      top: 25px;
+      right: 20px;
+      color: white;
+    }
+
+    .menu-toggle {
+      font-size: 24px;
+      cursor: pointer;
+      color: white;
+    }
+
+    .side-menu {
+      position: fixed;
+      top: 0;
+      right: -300px;
+      width: 250px;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.95);
+      padding: 30px;
+      transition: right 0.3s ease-in-out;
+      z-index: 999;
+    }
+
+    .side-menu.active {
+      right: 0;
+    }
+
+    .side-menu a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 10px 0;
+      border-bottom: 1px solid #444;
+    }
+
+    .sections {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 25px;
+      padding: 40px;
+    }
+
+    .section-card {
+      background-color: rgba(255, 255, 255, 0.07);
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      backdrop-filter: blur(4px);
+      cursor: pointer;
+      transition: 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .section-card:hover {
+      transform: scale(1.05);
+      background-color: rgba(255, 255, 255, 0.12);
+    }
+
+    .section-card .icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+      box-shadow: 0 0 6px rgba(255, 215, 0, 0.4);
+    }
+
+    .section-card span {
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #ccc;
+      border-top: 1px solid #333;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <i class="fas fa-crown"></i>
+      M
+    </div>
+    <div class="site-name">Naif alabas</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+
+  <div class="side-menu" id="sideMenu">
+    <a href="index.html">الرئيسية</a>
+    <a href="balance.html">تعبئة رصيد</a>
+    <a href="wallet.html">المحفظة</a>
+    <a href="about.html">من نحن</a>
+    <a href="contact.html">تواصل معنا</a>
+    <a href="payments.html">طرق الدفع</a>
+    <a href="https://wa.me/96170283696" target="_blank">الدعم الفني</a>
+  </div>
+
+  <main class="sections">
+    <div class="section-card" onclick="location.href='games.html'">
+      <img class="icon" src="https://i.postimg.cc/QNgGxQPW/image-1745572060321.jpg" />
+      <span>قسم الألعاب</span>
+    </div>
+    <div class="section-card" onclick="location.href='apps.html'">
+      <img class="icon" src="https://i.postimg.cc/vThN7zFq/copilot-image-1745572102584.jpg" />
+      <span>قسم التطبيقات</span>
+    </div>
+    <div class="section-card" onclick="location.href='cards.html'">
+      <img class="icon" src="https://i.postimg.cc/NfNn5pxL/copilot-image-1745572343447.jpg" />
+      <span>قسم البطاقات</span>
+    </div>
+    <div class="section-card" onclick="location.href='payments.html'">
+      <img class="icon" src="https://i.postimg.cc/52TkmyTV/image-1745572459745.jpg" />
+      <span>قسم الدفع الإلكتروني</span>
+    </div>
+    <div class="section-card" onclick="location.href='telecom.html'">
+      <img class="icon" src="https://i.postimg.cc/G3K75qVz/copilot-image-1745572558680.jpg" />
+      <span>قسم الاتصالات</span>
+    </div>
+    <div class="section-card" onclick="location.href='media.html'">
+      <img class="icon" src="https://i.postimg.cc/ncLRbqtx/copilot-image-1745572644917.jpg" />
+      <span>قسم السوشيال ميديا</span>
+    </div>
+    <div class="section-card" onclick="location.href='phones.html'">
+      <img class="icon" src="https://i.postimg.cc/26wwgSc3/copilot-image-1745572724338.jpg" />
+      <span>قسم الأرقام الوهمية</span>
+    </div>
+    <div class="section-card" onclick="location.href='accounts.html'">
+      <img class="icon" src="https://i.postimg.cc/j2SXTYmc/copilot-image-1745572865265.jpg" />
+      <span>قسم الحسابات الجاهزة</span>
+    </div>
+    <div class="section-card" onclick="location.href='tv.html'">
+      <img class="icon" src="https://i.postimg.cc/L4xDThgb/copilot-image-1745572911806.jpg" />
+      <span>قسم المنصات التلفزيونية</span>
+    </div>
+    <div class="section-card" onclick="location.href='windows.html'">
+      <img class="icon" src="https://i.postimg.cc/xdGybdSg/copilot-image-1745573036298.jpg" />
+      <span>قسم الويندوز</span>
+    </div>
+    <div class="section-card" onclick="location.href='tools.html'">
+      <img class="icon" src="https://i.postimg.cc/4yjh0Cgm/copilot-image-1745573099411.jpg" />
+      <span>قسم أدوات الهاتف</span>
+    </div>
+    <div class="section-card" onclick="location.href='vpn.html'">
+      <img class="icon" src="https://i.postimg.cc/Sj0JrW69/image-1745573459684.jpg" />
+      <span>قسم VPN</span>
+    </div>
+  </main>
+
+  <footer>
+    للتواصل عبر واتساب: +96170283696<br>
+    وسائل الدفع: Binance، USDT، Wish، Payeer
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('sideMenu');
+      menu.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>قسم المنصات التلفزيونية</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Tahoma, sans-serif;
+      background-color: #111;
+      color: white;
+    }
+    h1 {
+      text-align: center;
+      color: gold;
+      margin-bottom: 30px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background-color: #222;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+    }
+    .card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      border: 2px solid gold;
+    }
+    .card h2 {
+      color: #00e0d0;
+      margin-bottom: 10px;
+    }
+    .card input, .card select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 6px;
+      background-color: #333;
+      color: white;
+    }
+    .card button {
+      background-color: gold;
+      color: black;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .card button:hover {
+      background-color: #e6c200;
+    }
+  </style>
+</head>
+<body>
+
+<h1>قسم المنصات التلفزيونية</h1>
+
+<div class="grid">
+
+  <div class="card">
+    <img src="https://i.postimg.cc/Fzd0bmb2/Screenshot-Google.jpg" alt="IPTV">
+    <h2>IPTV</h2>
+    <input type="number" id="qty1" placeholder="أدخل الكمية المطلوبة">
+    <select id="pay1">
+      <option disabled selected>اختر طريقة الدفع</option>
+      <option>Binance</option>
+      <option>USDT (TRC20)</option>
+      <option>Wish</option>
+      <option>USDT (BEP20)</option>
+    </select>
+    <button onclick="sendOrder('IPTV', 'qty1', 'pay1')">اطلب عبر واتساب</button>
+  </div>
+
+  <div class="card">
+    <img src="https://i.postimg.cc/BZkTSL4s/Screenshot-Google.jpg" alt="Netflix">
+    <h2>Netflix</h2>
+    <input type="number" id="qty2" placeholder="أدخل الكمية المطلوبة">
+    <select id="pay2">
+      <option disabled selected>اختر طريقة الدفع</option>
+      <option>Binance</option>
+      <option>USDT (TRC20)</option>
+      <option>Wish</option>
+      <option>USDT (BEP20)</option>
+    </select>
+    <button onclick="sendOrder('Netflix', 'qty2', 'pay2')">اطلب عبر واتساب</button>
+  </div>
+
+  <div class="card">
+    <img src="https://i.postimg.cc/T1DWL0fx/Screenshot-Google.jpg" alt="SHAHID VIP">
+    <h2>SHAHID VIP</h2>
+    <input type="number" id="qty3" placeholder="أدخل الكمية المطلوبة">
+    <select id="pay3">
+      <option disabled selected>اختر طريقة الدفع</option>
+      <option>Binance</option>
+      <option>USDT (TRC20)</option>
+      <option>Wish</option>
+      <option>USDT (BEP20)</option>
+    </select>
+    <button onclick="sendOrder('SHAHID VIP', 'qty3', 'pay3')">اطلب عبر واتساب</button>
+  </div>
+
+  <div class="card">
+    <img src="https://i.postimg.cc/xd6pjv0g/Screenshot-Google.jpg" alt="+OSN">
+    <h2>+OSN</h2>
+    <input type="number" id="qty4" placeholder="أدخل الكمية المطلوبة">
+    <select id="pay4">
+      <option disabled selected>اختر طريقة الدفع</option>
+      <option>Binance</option>
+      <option>USDT (TRC20)</option>
+      <option>Wish</option>
+      <option>USDT (BEP20)</option>
+    </select>
+    <button onclick="sendOrder('+OSN', 'qty4', 'pay4')">اطلب عبر واتساب</button>
+  </div>
+
+  <div class="card">
+    <img src="https://i.postimg.cc/T2z7PY68/Screenshot-Google.jpg" alt="Shamna TV">
+    <h2>Shamna TV</h2>
+    <input type="number" id="qty5" placeholder="أدخل الكمية المطلوبة">
+    <select id="pay5">
+      <option disabled selected>اختر طريقة الدفع</option>
+      <option>Binance</option>
+      <option>USDT (TRC20)</option>
+      <option>Wish</option>
+      <option>USDT (BEP20)</option>
+    </select>
+    <button onclick="sendOrder('Shamna TV', 'qty5', 'pay5')">اطلب عبر واتساب</button>
+  </div>
+
+  <div class="card">
+    <img src="https://i.postimg.cc/rpZg2qJP/Screenshot-Google.jpg" alt="Look TV 4K">
+    <h2>Look TV 4K</h2>
+    <input type="number" id="qty6" placeholder="أدخل الكمية المطلوبة">
+    <select id="pay6">
+      <option disabled selected>اختر طريقة الدفع</option>
+      <option>Binance</option>
+      <option>USDT (TRC20)</option>
+      <option>Wish</option>
+      <option>USDT (BEP20)</option>
+    </select>
+    <button onclick="sendOrder('Look TV 4K', 'qty6', 'pay6')">اطلب عبر واتساب</button>
+  </div>
+
+  <div class="card">
+    <img src="https://i.postimg.cc/qqyGKydP/Screenshot-Google.jpg" alt="Amazon Prime">
+    <h2>Amazon Prime</h2>
+    <input type="number" id="qty7" placeholder="أدخل الكمية المطلوبة">
+    <select id="pay7">
+      <option disabled selected>اختر طريقة الدفع</option>
+      <option>Binance</option>
+      <option>USDT (TRC20)</option>
+      <option>Wish</option>
+      <option>USDT (BEP20)</option>
+    </select>
+    <button onclick="sendOrder('Amazon Prime', 'qty7', 'pay7')">اطلب عبر واتساب</button>
+  </div>
+
+  <div class="card">
+    <img src="https://i.postimg.cc/2S27nCPS/Screenshot-Google.jpg" alt="Telegram Premium">
+    <h2>Telegram Premium</h2>
+    <input type="number" id="qty8" placeholder="أدخل الكمية المطلوبة">
+    <select id="pay8">
+      <option disabled selected>اختر طريقة الدفع</option>
+      <option>Binance</option>
+      <option>USDT (TRC20)</option>
+      <option>Wish</option>
+      <option>USDT (BEP20)</option>
+    </select>
+    <button onclick="sendOrder('Telegram Premium', 'qty8', 'pay8')">اطلب عبر واتساب</button>
+  </div>
+
+  <div class="card">
+    <img src="https://i.postimg.cc/B6x8cgXB/Screenshot-Google.jpg" alt="Disney Plus">
+    <h2>Disney Plus</h2>
+    <input type="number" id="qty9" placeholder="أدخل الكمية المطلوبة">
+    <select id="pay9">
+      <option disabled selected>اختر طريقة الدفع</option>
+      <option>Binance</option>
+      <option>USDT (TRC20)</option>
+      <option>Wish</option>
+      <option>USDT (BEP20)</option>
+    </select>
+    <button onclick="sendOrder('Disney Plus', 'qty9', 'pay9')">اطلب عبر واتساب</button>
+  </div>
+
+  <div class="card">
+    <img src="https://i.postimg.cc/d36LgVR7/Screenshot-Google.jpg" alt="Android TV 33">
+    <h2>Android TV 33</h2>
+    <input type="number" id="qty10" placeholder="أدخل الكمية المطلوبة">
+    <select id="pay10">
+      <option disabled selected>اختر طريقة الدفع</option>
+      <option>Binance</option>
+      <option>USDT (TRC20)</option>
+      <option>Wish</option>
+      <option>USDT (BEP20)</option>
+    </select>
+    <button onclick="sendOrder('Android TV 33', 'qty10', 'pay10')">اطلب عبر واتساب</button>
+  </div>
+
+  <div class="card">
+    <img src="https://i.postimg.cc/m2dPwh2J/Screenshot-Google.jpg" alt="WATCH iT!">
+    <h2>WATCH iT!</h2>
+    <input type="number" id="qty11" placeholder="أدخل الكمية المطلوبة">
+    <select id="pay11">
+      <option disabled selected>اختر طريقة الدفع</option>
+      <option>Binance</option>
+      <option>USDT (TRC20)</option>
+      <option>Wish</option>
+      <option>USDT (BEP20)</option>
+    </select>
+    <button onclick="sendOrder('WATCH iT!', 'qty11', 'pay11')">اطلب عبر واتساب</button>
+  </div>
+
+</div>
+
+<script>
+  function sendOrder(name, qtyId, payId) {
+    const qty = document.getElementById(qtyId).value;
+    const pay = document.getElementById(payId).value;
+
+    if (!qty || !pay) {
+      alert("يرجى إدخال الكمية واختيار طريقة الدفع.");
+      return;
+    }
+
+    const message = `أرغب بطلب ${name}%0Aالكمية: ${qty}%0Aطريقة الدفع: ${pay}`;
+    window.open(`https://wa.me/96170283696?text=${message}`, '_blank');
+  }
+</script>
+
+</body>
+</html>
